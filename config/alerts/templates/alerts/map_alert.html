@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Alerts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-sizing: border-box;
+            border-right: 1px solid #ccc;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        .sidebar button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .content {
+            width: 80%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content h1 {
+            text-align: center;
+        }
+        .dropdowns {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .dropdowns select {
+            padding: 10px;
+            width: 40%;
+            border: 1px solid #ccc;
+        }
+        .panels {
+            display: flex;
+            justify-content: space-around;
+            height: 60%;
+        }
+        .panel {
+            width: 45%;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .actions button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Views</h2>
+        {% for link in sidebar_links %}
+            <button><a href="{{ link.url }}">{{ link.name }}</a></button>
+        {% endfor %}
+    </div>
+    <div class="content">
+        <h1>View A</h1>
+        <div class="dropdowns">
+            <select>
+                <option>Dropdown A</option>
+            </select>
+            <select>
+                <option>Dropdown B</option>
+            </select>
+        </div>
+        <div class="panels">
+            <div class="panel"></div>
+            <div class="panel"></div>
+        </div>
+        <div class="actions">
+            <button>Edit</button>
+            <button>Save</button>
+        </div>
+    </div>
+</body>
+</html>

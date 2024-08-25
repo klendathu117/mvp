@@ -1,0 +1,11 @@
+8/25
+
+TODO
+1. Easy next goal is to get sidebar buttons to load the correct view and implement back button (if its not a major lift)
+2. Get some demo templates created and in the DB
+3. Get the dropdown in Map Alerts to load from the list of custom templates
+    - is that easier to call from the DB all unique names? whats best practice?
+4. Get demo 3rd part alerts in that table, then have dropdown fetch list
+5. begin exploring the mapping logic
+    - field mappings highlight in green with numbers matching which fields to which on each json
+    

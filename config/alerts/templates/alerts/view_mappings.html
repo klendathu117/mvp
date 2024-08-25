@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Mappings</title>
+</head>
+<body>
+    <h1>Alert Mappings</h1>
+    <ul>
+        {% for mapping in mappings %}
+            <li>{{ mapping.name }} - Mapped to: {{ mapping.template.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
